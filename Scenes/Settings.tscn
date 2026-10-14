@@ -1,0 +1,87 @@
+[gd_scene load_steps=6 format=3 uid="uid://beyhkonaulxsq"]
+
+[ext_resource type="Texture2D" uid="uid://bxt7hq7nnq3vp" path="res://Sprites/SettingsBG_Sprite.png" id="1_ilyuh"]
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_xpx0v"]
+[ext_resource type="Texture2D" uid="uid://buwujkj08mrgy" path="res://Sprites/Button_Sprite.png" id="2_hsd07"]
+[ext_resource type="FontFile" uid="uid://lycwjas3o1d7" path="res://fonts/PixelOperator8.ttf" id="3_k4vet"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_dmooo"]
+texture = ExtResource("2_hsd07")
+texture_margin_top = 1.0
+region_rect = Rect2(0, 0, 16, 16)
+modulate_color = Color(0.977937, 0.977937, 0.977937, 1)
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_xpx0v")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 324)
+scale = Vector2(2.3, 2.22222)
+texture = ExtResource("1_ilyuh")
+
+[node name="Resume" type="Button" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 456.0
+offset_top = 139.0
+offset_right = 584.0
+offset_bottom = 203.0
+scale = Vector2(1.84, 1.84)
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.737255)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k4vet")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dmooo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dmooo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dmooo")
+text = "Resume
+"
+vertical_icon_alignment = 2
+
+[node name="Settings" type="Button" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 456.0
+offset_top = 263.0
+offset_right = 584.0
+offset_bottom = 327.0
+scale = Vector2(1.84, 1.84)
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.737255)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k4vet")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dmooo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dmooo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dmooo")
+text = "Settings
+"
+
+[node name="Menu" type="Button" parent="."]
+clip_contents = true
+layout_mode = 0
+offset_left = 456.0
+offset_top = 388.0
+offset_right = 584.0
+offset_bottom = 452.0
+scale = Vector2(1.84, 1.84)
+size_flags_vertical = 4
+theme_override_colors/font_hover_pressed_color = Color(0, 0, 0, 1)
+theme_override_colors/font_hover_color = Color(0, 0, 0, 0.737255)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_k4vet")
+theme_override_styles/hover = SubResource("StyleBoxTexture_dmooo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_dmooo")
+theme_override_styles/normal = SubResource("StyleBoxTexture_dmooo")
+text = "Menu
+"
+
+[connection signal="pressed" from="Resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="Menu" to="." method="_on_menu_pressed"]

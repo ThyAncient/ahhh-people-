@@ -1,0 +1,46 @@
+[gd_scene load_steps=4 format=3 uid="uid://jsqlgr73y6ex"]
+
+[ext_resource type="Script" path="res://to_be_continue.gd" id="1_w6f7a"]
+[ext_resource type="FontFile" uid="uid://lycwjas3o1d7" path="res://fonts/PixelOperator8.ttf" id="2_y11we"]
+[ext_resource type="Texture2D" uid="uid://bx1lqihnhaebo" path="res://Sprites/SuburbBG_Sprite.png" id="3_nv75r"]
+
+[node name="ToBeContinue" type="Node2D"]
+script = ExtResource("1_w6f7a")
+
+[node name="Label2" type="Label" parent="."]
+z_index = 1
+offset_left = 68.0
+offset_top = 256.0
+offset_right = 238.0
+offset_bottom = 279.0
+scale = Vector2(5.92, 5.92)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y11we")
+theme_override_font_sizes/font_size = 8
+text = "To Be Continued..
+"
+horizontal_alignment = 1
+
+[node name="Label3" type="Label" parent="."]
+z_index = 1
+offset_left = 268.0
+offset_top = 339.0
+offset_right = 506.0
+offset_bottom = 362.0
+scale = Vector2(2.44701, 2.44701)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_y11we")
+theme_override_font_sizes/font_size = 8
+text = "Made by: Ethymone, Tatsuya, Null Moon
+"
+horizontal_alignment = 1
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(576, 338)
+scale = Vector2(-5.88928, -5.88928)
+texture = ExtResource("3_nv75r")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 6.0
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

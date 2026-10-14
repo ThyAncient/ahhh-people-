@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dqhjshogfs1ty"
+path="res://.godot/imported/Pix  Ocean Monsters.mp3-f193a749ea8f87c6ad6695df3681f236.mp3str"
+
+[deps]
+
+source_file="res://Music/Pix  Ocean Monsters.mp3"
+dest_files=["res://.godot/imported/Pix  Ocean Monsters.mp3-f193a749ea8f87c6ad6695df3681f236.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://ckyyy7ij7ragl"]
+
+[ext_resource type="Texture2D" uid="uid://qefw1lxsstde" path="res://Sprites/SuburbFrontHouses_Sprite.png" id="1_v1ppk"]
+
+[node name="SuburbFrontHouses_Sprite" type="Sprite2D"]
+texture = ExtResource("1_v1ppk")

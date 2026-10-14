@@ -1,0 +1,53 @@
+[gd_scene load_steps=5 format=3 uid="uid://cix11voibjngo"]
+
+[ext_resource type="Script" path="res://Scripts/people.gd" id="1_hv73y"]
+[ext_resource type="PackedScene" uid="uid://4y3dstm2x17j" path="res://Scenes/death_particle.tscn" id="5_56oll"]
+[ext_resource type="AudioStream" uid="uid://bfs2ai01fe7yt" path="res://Audio/Death-sound.wav" id="5_v4e7r"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qj6nx"]
+radius = 7.0
+height = 36.0
+
+[node name="People" type="Node2D"]
+light_mask = 9
+visibility_layer = 9
+script = ExtResource("1_hv73y")
+
+[node name="RayCastRight" type="RayCast2D" parent="."]
+target_position = Vector2(33, 0)
+collision_mask = 9
+
+[node name="RayCastLeft" type="RayCast2D" parent="."]
+target_position = Vector2(-33, 0)
+collision_mask = 9
+
+[node name="RayCastRightDown" type="RayCast2D" parent="."]
+position = Vector2(18, 0)
+target_position = Vector2(0, 41)
+collision_mask = 9
+
+[node name="RayCastLeftDown" type="RayCast2D" parent="."]
+position = Vector2(-18, 0)
+target_position = Vector2(0, 41)
+collision_mask = 9
+
+[node name="PeopleDeathZone" parent="." groups=["Entity"] instance=ExtResource("5_56oll")]
+position = Vector2(11, 0)
+collision_layer = 5
+collision_mask = 6
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="PeopleDeathZone"]
+position = Vector2(-11, 14)
+shape = SubResource("CapsuleShape2D_qj6nx")
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.6
+one_shot = true
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_v4e7r")
+bus = &"SFX"
+
+[node name="RandomTimer" type="Timer" parent="."]
+
+[connection signal="timeout" from="Timer" to="PeopleDeathZone" method="_on_timer_timeout"]

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://di6kpqncmh0m2"]
+
+[ext_resource type="Texture2D" uid="uid://dnu0xw6cmsjjw" path="res://Sprites/EnemyPlaceHolder_Sprite.png" id="1_m0s5u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_herus"]
+size = Vector2(28, 46)
+
+[node name="StaticBody2D" type="StaticBody2D"]
+collision_layer = 4
+collision_mask = 11
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+scale = Vector2(4.625, 3.25)
+texture = ExtResource("1_m0s5u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_herus")

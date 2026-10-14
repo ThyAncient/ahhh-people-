@@ -1,0 +1,13 @@
+res://Scenes/levels/stage_01.tscn
+res://Scenes/TileMapLayerFolder/Electricpostsprite.tres
+res://Scenes/levels/stage_02.tscn
+res://Scenes/PlayerScene.tscn
+res://Scenes/manHole.tscn
+res://Scenes/sanitybaranimatedsprite.tscn
+res://Scenes/Level.tscn
+res://Scenes/people.tscn
+res://Scenes/policeman.tscn
+res://Scenes/UI.tscn
+res://Scenes/levels/main_menu.tscn
+res://Scenes/levels/intro_cutscene.tscn
+res://Scenes/levels/to_be_continue.tscn

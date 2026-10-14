@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=3 uid="uid://ckq8wyxh1k23p"]
+
+[ext_resource type="Script" path="res://Scripts/gamemanager.gd" id="1_hqt2x"]
+[ext_resource type="PackedScene" uid="uid://c6dk8sjch1q01" path="res://Scenes/chocolate_bar.tscn" id="3_njduw"]
+[ext_resource type="PackedScene" uid="uid://di6kpqncmh0m2" path="res://Scenes/wall.tscn" id="19_480bu"]
+
+[node name="Game" type="Node2D"]
+
+[node name="Gamemanager" type="Node" parent="."]
+script = ExtResource("1_hqt2x")
+
+[node name="ChocolateBar" parent="." instance=ExtResource("3_njduw")]
+position = Vector2(-42, 9)
+scale = Vector2(0.44, 0.44)
+
+[node name="StaticBody2D" parent="." instance=ExtResource("19_480bu")]
+position = Vector2(-350, 106)

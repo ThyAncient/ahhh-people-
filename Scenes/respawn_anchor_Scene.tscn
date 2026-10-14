@@ -1,0 +1,11 @@
+[gd_scene load_steps=4 format=3 uid="uid://bocww8tfbw7nx"]
+
+[ext_resource type="Script" path="res://Scenes/levels/respawn_anchor.gd" id="1_x37gp"]
+[ext_resource type="PackedScene" uid="uid://b77uydgmot3c8" path="res://Scenes/PlayerScene.tscn" id="2_evqo7"]
+[ext_resource type="PackedScene" uid="uid://coo13bss82qbb" path="res://Scenes/Level.tscn" id="3_55np6"]
+
+[node name="RespawnAnchor" type="Node2D"]
+position = Vector2(110, 87)
+script = ExtResource("1_x37gp")
+player_scene = ExtResource("2_evqo7")
+Level_Scene = ExtResource("3_55np6")

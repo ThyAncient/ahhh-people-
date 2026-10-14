@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://baogqtdlniyab"]
+
+[ext_resource type="Script" path="res://Scripts/bullets.gd" id="1_658fn"]
+[ext_resource type="Texture2D" uid="uid://cn6d7d30vjxou" path="res://Sprites/e_pistol_bullet.png" id="2_fuj7v"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_sv0qy"]
+radius = 2.0
+height = 12.0
+
+[node name="Bullets" type="Node2D"]
+rotation = 1.5708
+scale = Vector2(0.48, 0.64)
+script = ExtResource("1_658fn")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 15
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+scale = Vector2(3.65791, 3.65791)
+texture = ExtResource("2_fuj7v")
+region_enabled = true
+region_rect = Rect2(32.0205, 23.027, 0.99427, 2.98281)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CapsuleShape2D_sv0qy")
+
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 0.5
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Area2D"]
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(0.1, 0.35)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]
+[connection signal="screen_exited" from="Area2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

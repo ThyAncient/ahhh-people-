@@ -1,0 +1,248 @@
+[gd_scene load_steps=5 format=3 uid="uid://r1mi14r2jjlw"]
+
+[ext_resource type="Texture2D" uid="uid://qefw1lxsstde" path="res://Sprites/SuburbFrontHouses_Sprite.png" id="1_ujatt"]
+[ext_resource type="Texture2D" uid="uid://dkmnwc25p7ulm" path="res://Sprites/SuburbBGHouseforeground_Sprite.png" id="2_twynv"]
+[ext_resource type="Texture2D" uid="uid://cisi2km2egqox" path="res://Sprites/SuburbBGHouse_Sprite.png" id="3_mqgn3"]
+[ext_resource type="Texture2D" uid="uid://cj5nqtkirxaub" path="res://Sprites/Electricpost_Sprite.png" id="4_gd521"]
+
+[node name="ParallaxBackground" type="ParallaxBackground"]
+
+[node name="BigHousesPL" type="ParallaxLayer" parent="."]
+z_index = 10
+motion_mirroring = Vector2(948, 0)
+
+[node name="Sprite2D7" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(158, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(316, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(474, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(632, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(790, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(948, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="BigHousesPL"]
+z_index = -1
+position = Vector2(1106, 0)
+texture = ExtResource("1_ujatt")
+centered = false
+
+[node name="MeduimHousesPL" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(800, 0)
+
+[node name="Sprite2D4" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(0, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(100, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(200, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(300, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(400, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(500, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D10" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(600, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D11" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(700, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="Sprite2D12" type="Sprite2D" parent="MeduimHousesPL"]
+z_index = -2
+position = Vector2(800, 49)
+texture = ExtResource("2_twynv")
+centered = false
+
+[node name="SmallHousesPL" type="ParallaxLayer" parent="."]
+motion_mirroring = Vector2(728, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(1, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D2" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(52, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D3" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(102, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D4" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(152, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D5" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(202, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D6" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(252, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D7" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(302, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D8" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(352, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D9" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(402, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D10" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(452, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D11" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(502, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D12" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(502, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D13" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(624, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D14" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(676, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="Sprite2D15" type="Sprite2D" parent="SmallHousesPL"]
+z_index = -3
+position = Vector2(728, 76)
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_mqgn3")
+centered = false
+
+[node name="ElectricPost" type="ParallaxLayer" parent="."]
+z_index = 10
+motion_mirroring = Vector2(1400, 0)
+
+[node name="Sprite2D" type="Sprite2D" parent="ElectricPost"]
+position = Vector2(0, 64.5)
+texture = ExtResource("4_gd521")
+
+[node name="Sprite2D2" type="Sprite2D" parent="ElectricPost"]
+position = Vector2(350, 64.5)
+texture = ExtResource("4_gd521")
+
+[node name="Sprite2D3" type="Sprite2D" parent="ElectricPost"]
+position = Vector2(700, 64.5)
+texture = ExtResource("4_gd521")
+
+[node name="Sprite2D4" type="Sprite2D" parent="ElectricPost"]
+position = Vector2(1050, 64.5)
+texture = ExtResource("4_gd521")
+
+[node name="Sprite2D5" type="Sprite2D" parent="ElectricPost"]
+position = Vector2(1400, 64.5)
+texture = ExtResource("4_gd521")

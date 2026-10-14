@@ -1,0 +1,93 @@
+[gd_scene load_steps=14 format=3 uid="uid://w7eo7f01f2wm"]
+
+[ext_resource type="Texture2D" uid="uid://c3iwctobensnd" path="res://Sprites/FrenzyBar_Sprite.png" id="1_sti7k"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x2ik8"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hg84v"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_exj1a"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_co1yy"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xebun"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l3oqt"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tm8qu"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qiolo"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m7mla"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_44e4s"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_55jq3"]
+atlas = ExtResource("1_sti7k")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_og4nq"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x2ik8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hg84v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_exj1a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_co1yy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xebun")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l3oqt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tm8qu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qiolo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m7mla")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_44e4s")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_55jq3")
+}],
+"loop": true,
+"name": &"frenzybarAnim",
+"speed": 5.0
+}]
+
+[node name="frenzybar" type="AnimatedSprite2D"]
+scale = Vector2(2.335, 2.335)
+sprite_frames = SubResource("SpriteFrames_og4nq")
+animation = &"frenzybarAnim"

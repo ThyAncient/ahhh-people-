@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c500vmtt5dew7"]
+
+[ext_resource type="Script" path="res://Scripts/sanity_bar_manager.gd" id="1_o1s4b"]
+
+[node name="SanityBarManager" type="Node"]
+script = ExtResource("1_o1s4b")

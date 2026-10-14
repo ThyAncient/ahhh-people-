@@ -1,0 +1,417 @@
+[gd_scene load_steps=20 format=3 uid="uid://coo13bss82qbb"]
+
+[ext_resource type="PackedScene" uid="uid://cix11voibjngo" path="res://Scenes/people.tscn" id="1_hawqi"]
+[ext_resource type="Texture2D" uid="uid://clnvp5n48wvov" path="res://Sprites/people_idle.png" id="2_obvru"]
+[ext_resource type="Texture2D" uid="uid://dpp0doo0uukwj" path="res://Sprites/people_walk.png" id="3_384ff"]
+[ext_resource type="PackedScene" uid="uid://dsx0qvr6hf7em" path="res://Scenes/policeman.tscn" id="4_tmeci"]
+[ext_resource type="PackedScene" uid="uid://c6dk8sjch1q01" path="res://Scenes/chocolate_bar.tscn" id="5_5lfvg"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fisc8"]
+atlas = ExtResource("2_obvru")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_x18km"]
+atlas = ExtResource("3_384ff")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_e5a44"]
+atlas = ExtResource("3_384ff")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4mum"]
+atlas = ExtResource("3_384ff")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4kcl"]
+atlas = ExtResource("3_384ff")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_on2ng"]
+atlas = ExtResource("3_384ff")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l0k3r"]
+atlas = ExtResource("3_384ff")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_25roq"]
+atlas = ExtResource("3_384ff")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_o6q25"]
+atlas = ExtResource("3_384ff")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tdbcw"]
+atlas = ExtResource("3_384ff")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_34kj4"]
+atlas = ExtResource("3_384ff")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4052"]
+atlas = ExtResource("3_384ff")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fi8st"]
+atlas = ExtResource("3_384ff")
+region = Rect2(704, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_as87a"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fisc8")
+}],
+"loop": true,
+"name": &"PeopleIdle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_x18km")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_e5a44")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4mum")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4kcl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_on2ng")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l0k3r")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_25roq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_o6q25")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tdbcw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_34kj4")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4052")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fi8st")
+}],
+"loop": true,
+"name": &"PeopleWalk",
+"speed": 10.0
+}]
+
+[node name="Level" type="Node2D"]
+
+[node name="creatures" type="Node2D" parent="."]
+
+[node name="People" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1085, 96)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People2" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1181, 96)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People2"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People3" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1406, 100)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People3"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People4" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1312, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People4"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People5" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1672, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People5"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People6" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1810, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People6"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People7" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(1953, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People7"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People8" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(2153, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People8"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People9" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(2267, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People9"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People10" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(2397, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People10"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People11" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(2694, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People11"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People12" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(2790, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People12"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People13" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(2995, 99)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People13"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People14" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(3269, 96)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People14"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People15" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(3413, 97)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People15"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People16" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(3487, 97)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People16"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People17" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(3830, 97)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People17"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People18" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(4094, 97)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People18"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People19" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(4353, 97)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People19"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People20" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(4461, 101)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People20"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="People21" parent="creatures" instance=ExtResource("1_hawqi")]
+z_index = 1
+position = Vector2(4586, 101)
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="creatures/People21"]
+z_index = -1
+sprite_frames = SubResource("SpriteFrames_as87a")
+animation = &"PeopleWalk"
+autoplay = "PeopleIdle"
+flip_h = true
+
+[node name="Police" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(3557, 95)
+left_bounds_position = Vector2(-85, 0)
+
+[node name="Police2" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(3663, 95)
+left_bounds_position = Vector2(-85, 0)
+
+[node name="Police3" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(4113, 95)
+right_bounds_position = Vector2(80, 0)
+left_bounds_position = Vector2(-80, 0)
+
+[node name="Police4" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(4735, 95)
+right_bounds_position = Vector2(60, 0)
+left_bounds_position = Vector2(-60, 0)
+
+[node name="Police5" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(4851, 95)
+right_bounds_position = Vector2(60, 0)
+left_bounds_position = Vector2(-60, 0)
+
+[node name="Police6" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(4987, 95)
+right_bounds_position = Vector2(60, 0)
+left_bounds_position = Vector2(-60, 0)
+
+[node name="Police7" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(4987, 95)
+right_bounds_position = Vector2(60, 0)
+left_bounds_position = Vector2(-60, 0)
+
+[node name="Police8" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(5623, 95)
+left_bounds_position = Vector2(-85, 0)
+
+[node name="Police9" parent="creatures" instance=ExtResource("4_tmeci")]
+position = Vector2(5456, 95)
+left_bounds_position = Vector2(-85, 0)
+
+[node name="powerups" type="Node2D" parent="."]
+
+[node name="ChocolateBar" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(647, 111)
+scale = Vector2(0.655529, 0.655529)
+
+[node name="ChocolateBar2" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(1577, 100)
+scale = Vector2(0.655529, 0.655529)
+
+[node name="ChocolateBar3" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(2728, 100)
+scale = Vector2(0.655529, 0.655529)
+
+[node name="ChocolateBar4" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(3801, 100)
+scale = Vector2(0.655529, 0.655529)
+
+[node name="ChocolateBar5" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(3152, 100)
+scale = Vector2(0.655529, 0.655529)
+
+[node name="ChocolateBar6" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(4470, 100)
+scale = Vector2(0.655529, 0.655529)
+
+[node name="ChocolateBar7" parent="powerups" instance=ExtResource("5_5lfvg")]
+position = Vector2(5090, 100)
+scale = Vector2(0.655529, 0.655529)

@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://c8o3supsxr341"]
+
+[ext_resource type="Texture2D" uid="uid://bx1lqihnhaebo" path="res://Sprites/SuburbBG_Sprite.png" id="1_4pw7e"]
+
+[node name="SuburbBG_Sprite" type="Sprite2D"]
+texture = ExtResource("1_4pw7e")

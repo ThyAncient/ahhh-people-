@@ -1,0 +1,14 @@
+HSlider
+Control
+Sprite2D
+CollisionShape2D
+Area2D
+Node
+AnimationPlayer
+AnimatedSprite2D
+AudioStreamPlayer2D
+CanvasLayer
+Button
+Node2D
+Timer
+Label

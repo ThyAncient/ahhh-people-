@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://c6dk8sjch1q01"]
+
+[ext_resource type="Script" path="res://Scripts/chocolate_bar.gd" id="1_fv03q"]
+[ext_resource type="Texture2D" uid="uid://duby6wujt8shn" path="res://Sprites/ChocolateBarPowerUp_Sprite.png" id="1_mhy3w"]
+[ext_resource type="AudioStream" uid="uid://b8qny2gfqsvlb" path="res://Audio/ChocolatePowerup.wav" id="3_mv0ov"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_v2mrx"]
+size = Vector2(21, 26)
+
+[node name="ChocolateBar" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_fv03q")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("1_mhy3w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-0.5, 1)
+shape = SubResource("RectangleShape2D_v2mrx")
+
+[node name="SFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_mv0ov")
+volume_db = -10.0
+bus = &"SFX"
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
+[connection signal="finished" from="SFX" to="." method="_on_sfx_finished"]

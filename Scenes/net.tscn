@@ -1,0 +1,41 @@
+[gd_scene load_steps=4 format=3 uid="uid://ck8t3a3yoqj8n"]
+
+[ext_resource type="Script" path="res://Scripts/net.gd" id="1_2t1o2"]
+[ext_resource type="Texture2D" uid="uid://eqmx7ddxj6j8" path="res://Sprites/Net.png" id="2_dflt0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_8m1su"]
+size = Vector2(5.70352, 16.2517)
+
+[node name="Net" type="Node2D"]
+scale = Vector2(0.715358, 0.953811)
+script = ExtResource("1_2t1o2")
+
+[node name="Area2D" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 7
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D"]
+position = Vector2(-11.1832, -1.04843)
+rotation = -1.5708
+scale = Vector2(1.91224, 1.91224)
+texture = ExtResource("2_dflt0")
+region_enabled = true
+region_rect = Rect2(146.538, 14.8371, 27.5666, 20.1344)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(-8.73015, -1.24979e-07)
+scale = Vector2(2.33076, 0.903163)
+shape = SubResource("RectangleShape2D_8m1su")
+debug_color = Color(0.989415, 0, 0.290723, 0.42)
+
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 0.5
+one_shot = true
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="Area2D"]
+position = Vector2(0, -1.19209e-07)
+scale = Vector2(0.117431, 0.418776)
+
+[connection signal="body_entered" from="Area2D" to="." method="_on_area_2d_body_entered"]
+[connection signal="timeout" from="Area2D/Timer" to="." method="_on_timer_timeout"]
+[connection signal="screen_exited" from="Area2D/VisibleOnScreenNotifier2D" to="." method="_on_visible_on_screen_notifier_2d_screen_exited"]

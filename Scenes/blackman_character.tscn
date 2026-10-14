@@ -1,0 +1,205 @@
+[gd_scene load_steps=23 format=3 uid="uid://bumltxbra8ihm"]
+
+[ext_resource type="Script" path="res://Scripts/blackman_character.gd" id="1_sguo1"]
+[ext_resource type="Texture2D" uid="uid://5kugf6d581a5" path="res://Sprites/MIB_idle.png" id="2_gwq17"]
+[ext_resource type="AudioStream" uid="uid://6dwlwfysffef" path="res://Audio/gunsoundeffect.wav" id="2_vbub8"]
+[ext_resource type="AudioStream" uid="uid://bfs2ai01fe7yt" path="res://Audio/Death-sound.wav" id="3_qujsv"]
+[ext_resource type="Texture2D" uid="uid://c7qjd0nqwvw1r" path="res://Sprites/MIB_run.png" id="3_wbx4s"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m24v5"]
+atlas = ExtResource("2_gwq17")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_358kl"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_u4lls"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q7mgt"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_42p4b"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_a6i3f"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_1ktm6"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_75igg"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_60mf5"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cr5ue"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lku30"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_nkek1"]
+atlas = ExtResource("3_wbx4s")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_onjvp"]
+atlas = ExtResource("2_gwq17")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_5ul7q"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m24v5")
+}],
+"loop": true,
+"name": &"Blackman_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_358kl")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_u4lls")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q7mgt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_42p4b")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_a6i3f")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_1ktm6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_75igg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_60mf5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cr5ue")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lku30")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_nkek1")
+}],
+"loop": true,
+"name": &"Blackman_run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_onjvp")
+}],
+"loop": true,
+"name": &"Blackman_shoot",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_de8ep"]
+radius = 5.0
+height = 43.5
+
+[sub_resource type="Curve" id="Curve_a34ir"]
+_data = [Vector2(0.0168539, 1), 0.0, 0.0, 0, 0, Vector2(0.516854, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.966292, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i1v6"]
+size = Vector2(15, 45)
+
+[node name="BlackmanCharacter" type="CharacterBody2D"]
+z_index = 2
+collision_layer = 8
+collision_mask = 5
+script = ExtResource("1_sguo1")
+
+[node name="BlackmanSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_5ul7q")
+animation = &"Blackman_idle"
+
+[node name="BlackmanCollision" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 10.25)
+shape = SubResource("CapsuleShape2D_de8ep")
+
+[node name="RayCast1" type="RayCast2D" parent="."]
+position = Vector2(1, 2)
+target_position = Vector2(-100, 0)
+collision_mask = 14
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="pistol muzzle" type="Marker2D" parent="."]
+position = Vector2(16, -2)
+
+[node name="delaybetweenshoots" type="Timer" parent="."]
+one_shot = true
+
+[node name="bulletDircetion" type="Marker2D" parent="."]
+position = Vector2(2, -2)
+
+[node name="hurtbox" type="Area2D" parent="."]
+collision_layer = 0
+collision_mask = 2
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="hurtbox"]
+z_index = 6
+position = Vector2(0, 7)
+emitting = false
+amount = 500
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 8.02
+spread = 180.0
+gravity = Vector2(0, 300)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_a34ir")
+color = Color(1, 0.34, 0.34, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0.5, 10.5)
+shape = SubResource("RectangleShape2D_6i1v6")
+debug_color = Color(0.969084, 0, 0.463677, 0.42)
+
+[node name="DelayOnDeath" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="shooting" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("2_vbub8")
+bus = &"SFX"
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("3_qujsv")
+bus = &"SFX"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="delaybetweenshoots" to="." method="_on_delaybetweenshoots_timeout"]
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="timeout" from="DelayOnDeath" to="." method="_on_delay_on_death_timeout"]

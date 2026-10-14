@@ -1,0 +1,38 @@
+[gd_scene load_steps=4 format=3 uid="uid://4y3dstm2x17j"]
+
+[ext_resource type="Script" path="res://Scripts/PeopleDeath_zone.gd" id="1_nktff"]
+
+[sub_resource type="Curve" id="Curve_a34ir"]
+_data = [Vector2(0.0168539, 1), 0.0, 0.0, 0, 0, Vector2(0.516854, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.966292, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_iexsq"]
+offsets = PackedFloat32Array(0.353333, 1)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[node name="death_particle" type="Area2D"]
+collision_mask = 2
+script = ExtResource("1_nktff")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+z_index = 6
+emitting = false
+amount = 500
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 8.02
+spread = 180.0
+gravity = Vector2(0, 300)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_a34ir")
+color = Color(0.59, 0.59, 0.59, 1)
+color_ramp = SubResource("Gradient_iexsq")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,221 @@
+[gd_scene load_steps=26 format=3 uid="uid://dsx0qvr6hf7em"]
+
+[ext_resource type="Script" path="res://Scripts/policeman.gd" id="1_i4q5h"]
+[ext_resource type="Texture2D" uid="uid://bk1775f5fc5bb" path="res://Sprites/Police_idle.png" id="2_n6wnr"]
+[ext_resource type="Texture2D" uid="uid://csqr0l7f36tw2" path="res://Sprites/Police_run.png" id="3_3j8b1"]
+[ext_resource type="Texture2D" uid="uid://ux3hg24efix7" path="res://Sprites/Police_shoot.png" id="4_6wwgp"]
+[ext_resource type="AudioStream" uid="uid://6dwlwfysffef" path="res://Audio/gunsoundeffect.wav" id="5_jhknv"]
+[ext_resource type="AudioStream" uid="uid://bfs2ai01fe7yt" path="res://Audio/Death-sound.wav" id="6_f7efj"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d4wv7"]
+atlas = ExtResource("2_n6wnr")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wc46a"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cncd8"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vrtuu"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ri7k5"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_rlalv"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_np8er"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k7e8m"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fjvtu"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n5aey"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_13bqo"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_yk5rv"]
+atlas = ExtResource("3_3j8b1")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17owp"]
+atlas = ExtResource("4_6wwgp")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_eu63h"]
+atlas = ExtResource("4_6wwgp")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ohq7v"]
+atlas = ExtResource("4_6wwgp")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lk2cw"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d4wv7")
+}],
+"loop": true,
+"name": &"Police_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wc46a")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cncd8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vrtuu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ri7k5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_rlalv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_np8er")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k7e8m")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fjvtu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n5aey")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_13bqo")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_yk5rv")
+}],
+"loop": true,
+"name": &"Police_run",
+"speed": 10.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_17owp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_eu63h")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ohq7v")
+}],
+"loop": false,
+"name": &"Police_shoot",
+"speed": 15.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_de8ep"]
+radius = 5.0
+height = 43.5
+
+[sub_resource type="Curve" id="Curve_a34ir"]
+_data = [Vector2(0.0168539, 1), 0.0, 0.0, 0, 0, Vector2(0.516854, 0.230769), 0.0, 0.0, 0, 0, Vector2(0.966292, 0.010989), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_6i1v6"]
+size = Vector2(15, 45)
+
+[node name="PolicemanCharacter" type="CharacterBody2D"]
+z_index = 2
+collision_layer = 8
+collision_mask = 6
+script = ExtResource("1_i4q5h")
+
+[node name="PolicemanSprite" type="AnimatedSprite2D" parent="."]
+sprite_frames = SubResource("SpriteFrames_lk2cw")
+animation = &"Police_shoot"
+
+[node name="PolicemanCollision" type="CollisionShape2D" parent="." groups=["Entity"]]
+position = Vector2(0.25, 10.25)
+shape = SubResource("CapsuleShape2D_de8ep")
+
+[node name="RayCast1" type="RayCast2D" parent="."]
+position = Vector2(1, 2)
+target_position = Vector2(-100, 0)
+collision_mask = 14
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 5.0
+one_shot = true
+
+[node name="pistol muzzle" type="Marker2D" parent="."]
+position = Vector2(16, -2)
+
+[node name="delaybetweenshoots" type="Timer" parent="."]
+wait_time = 2.5
+one_shot = true
+
+[node name="bulletDircetion" type="Marker2D" parent="."]
+position = Vector2(2, -2)
+
+[node name="hurtbox" type="Area2D" parent="." groups=["Entity"]]
+collision_layer = 5
+collision_mask = 6
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="hurtbox"]
+z_index = 6
+position = Vector2(0, 7)
+emitting = false
+amount = 500
+lifetime = 0.5
+one_shot = true
+explosiveness = 1.0
+randomness = 1.0
+emission_shape = 2
+emission_sphere_radius = 8.02
+spread = 180.0
+gravity = Vector2(0, 300)
+initial_velocity_min = 50.0
+initial_velocity_max = 100.0
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_a34ir")
+color = Color(1, 0.34, 0.34, 1)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="hurtbox"]
+position = Vector2(0.5, 10.5)
+shape = SubResource("RectangleShape2D_6i1v6")
+debug_color = Color(0.969084, 0, 0.463677, 0.42)
+
+[node name="DelayOnDeath" type="Timer" parent="."]
+wait_time = 0.3
+one_shot = true
+
+[node name="shooting" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("5_jhknv")
+bus = &"SFX"
+
+[node name="DeathSFX" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource("6_f7efj")
+bus = &"SFX"
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="delaybetweenshoots" to="." method="_on_delaybetweenshoots_timeout"]
+[connection signal="body_entered" from="hurtbox" to="." method="_on_hurtbox_body_entered"]
+[connection signal="timeout" from="DelayOnDeath" to="." method="_on_delay_on_death_timeout"]

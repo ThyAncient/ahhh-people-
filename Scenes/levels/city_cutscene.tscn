@@ -1,0 +1,251 @@
+[gd_scene load_steps=13 format=3 uid="uid://drnaom1l5bfq3"]
+
+[ext_resource type="Texture2D" uid="uid://gto7o21whlp" path="res://Sprites/CutsceneSprite/CityCutScene/graybg.jpg" id="1_b7nls"]
+[ext_resource type="Script" path="res://Scenes/levels/cutscenePlayer.gd" id="1_vpj2u"]
+[ext_resource type="Texture2D" uid="uid://bf2p54ucnnj7a" path="res://Sprites/CutsceneSprite/CityCutScene/frame_17_head.png" id="2_w5r5a"]
+[ext_resource type="Texture2D" uid="uid://temxwoj274e4" path="res://Sprites/CutsceneSprite/CityCutScene/frame_17_eyes.png" id="3_ml484"]
+[ext_resource type="Texture2D" uid="uid://b84q7hmx88yam" path="res://Sprites/CutsceneSprite/CityCutScene/frame_17_hand.png" id="4_a026r"]
+[ext_resource type="Texture2D" uid="uid://bvlbjcoek78sk" path="res://Sprites/CutsceneSprite/2Scene/text_bar_thing.png" id="5_w0xl5"]
+[ext_resource type="Texture2D" uid="uid://b6hylox8advp7" path="res://Sprites/CutsceneSprite/CityCutScene/frame_18_head.png" id="6_sj5cv"]
+[ext_resource type="Texture2D" uid="uid://c5plot4yd6dm3" path="res://Sprites/CutsceneSprite/CityCutScene/frame_18_hand.png" id="7_2i8fm"]
+[ext_resource type="Texture2D" uid="uid://yvdu2afkla62" path="res://Sprites/CutsceneSprite/CityCutScene/whitebg.jpg" id="8_dondx"]
+
+[sub_resource type="Animation" id="Animation_h3nm2"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FirstScene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FirstScene/Sprite2D3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FirstScene/Sprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FirstScene/Sprite2D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(0, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FirstScene/Sprite2D3/Sprite2D5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SecondScene:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SecondScene/Sprite2D5:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_kyrr7"]
+resource_name = "citycutscene_Anim"
+length = 6.0
+step = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("FirstScene:visible")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [true, false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("FirstScene/Sprite2D3:visible")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("FirstScene/Sprite2D3:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(27.9528, 0)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("FirstScene/Sprite2D4:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 0), Vector2(-24.2126, 0)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("FirstScene/Sprite2D3/Sprite2D5:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 2.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("SecondScene:visible")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 4),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/6/type = "value"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("SecondScene/Sprite2D5:modulate")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"times": PackedFloat32Array(4.1, 5.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ucsn4"]
+_data = {
+"RESET": SubResource("Animation_h3nm2"),
+"citycutscene_Anim": SubResource("Animation_kyrr7")
+}
+
+[node name="city_Cutscene" type="Node2D"]
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ucsn4")
+}
+script = ExtResource("1_vpj2u")
+
+[node name="FirstScene" type="Node2D" parent="."]
+position = Vector2(563, 317)
+scale = Vector2(5.08, 5.08)
+
+[node name="Sprite2D2" type="Sprite2D" parent="FirstScene"]
+scale = Vector2(0.472441, 0.472441)
+texture = ExtResource("1_b7nls")
+
+[node name="Sprite2D3" type="Sprite2D" parent="FirstScene"]
+texture = ExtResource("2_w5r5a")
+
+[node name="Sprite2D5" type="Sprite2D" parent="FirstScene/Sprite2D3"]
+position = Vector2(0.285439, 0)
+texture = ExtResource("3_ml484")
+
+[node name="Sprite2D4" type="Sprite2D" parent="FirstScene"]
+texture = ExtResource("4_a026r")
+
+[node name="Sprite2D" type="Sprite2D" parent="FirstScene"]
+position = Vector2(0, -1.5748)
+texture = ExtResource("5_w0xl5")
+
+[node name="SecondScene" type="Node2D" parent="."]
+position = Vector2(563, 317)
+scale = Vector2(5.08, 5.08)
+
+[node name="Sprite2D2" type="Sprite2D" parent="SecondScene"]
+scale = Vector2(0.472441, 0.472441)
+texture = ExtResource("1_b7nls")
+
+[node name="Sprite2D3" type="Sprite2D" parent="SecondScene"]
+position = Vector2(27.9528, 0)
+texture = ExtResource("6_sj5cv")
+
+[node name="Sprite2D4" type="Sprite2D" parent="SecondScene"]
+position = Vector2(9.84252, 0)
+texture = ExtResource("7_2i8fm")
+
+[node name="Sprite2D" type="Sprite2D" parent="SecondScene"]
+position = Vector2(0, -0.984252)
+texture = ExtResource("5_w0xl5")
+
+[node name="Sprite2D5" type="Sprite2D" parent="SecondScene"]
+modulate = Color(1, 1, 1, 0)
+position = Vector2(9.84252, 0)
+scale = Vector2(0.133859, 0.133859)
+texture = ExtResource("8_dondx")
+
+[connection signal="animation_finished" from="AnimationPlayer" to="AnimationPlayer" method="_on_animation_finished"]

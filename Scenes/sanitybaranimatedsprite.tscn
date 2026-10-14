@@ -1,0 +1,94 @@
+[gd_scene load_steps=14 format=3 uid="uid://dnnogo52sntv7"]
+
+[ext_resource type="Texture2D" uid="uid://blnedp3hb40c1" path="res://Sprites/SanityBar_Sprite.png" id="1_ailnx"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_k72x1"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(0, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_4jyt6"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(64, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7061l"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(128, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_og0vg"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(192, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5tr5g"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(256, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lxwa1"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(320, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n82uw"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(384, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_swqc3"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(448, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pe5ka"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(512, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6f3r8"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(576, 0, 64, 64)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oekak"]
+atlas = ExtResource("1_ailnx")
+region = Rect2(640, 0, 64, 64)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_n0c3e"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_k72x1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_4jyt6")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7061l")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_og0vg")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5tr5g")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lxwa1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n82uw")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_swqc3")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pe5ka")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6f3r8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oekak")
+}],
+"loop": false,
+"name": &"SanityBarAnim",
+"speed": 6.0
+}]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D"]
+position = Vector2(1121, 193)
+scale = Vector2(2.335, 2.335)
+sprite_frames = SubResource("SpriteFrames_n0c3e")
+animation = &"SanityBarAnim"

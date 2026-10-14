@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://dorxg7bubmt5j"]
+
+[ext_resource type="AudioStream" uid="uid://dqhjshogfs1ty" path="res://Music/Pix  Ocean Monsters.mp3" id="1_vv5gi"]
+
+[node name="SuburbMusic" type="AudioStreamPlayer2D"]
+stream = ExtResource("1_vv5gi")
+autoplay = true
