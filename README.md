@@ -1,4 +1,5 @@
 # AHH PEOPLE!!
+<img width="833" height="526" alt="Image" src="https://github.com/user-attachments/assets/0310dad6-ea27-44c1-bf5f-07901e3a2c05"/>
 
 Have you drunk something? Well... YOU GOTTA RUN AND AVOID PEOPLE!!
 
@@ -10,7 +11,7 @@ A chaotic platformer where avoiding people is the key to survival! Every encount
 
 <!-- Replace this section with a gameplay video link or a GIF preview. -->
 
-**Gameplay Preview:** [Watch the gameplay video here](YOUR_VIDEO_LINK_HERE)
+https://github.com/user-attachments/assets/b188599f-3640-461a-9dde-c74f3c37c713
 
 <!-- You can also add screenshots below. -->
 <!-- ![Gameplay Screenshot](Screenshots/gameplay.png) -->
